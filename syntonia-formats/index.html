@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Форматы работы Syntonia: точка входа, индивидуальные сессии, программы и сопровождение.">
+  <title>Syntonia — Форматы работы</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="logo" href="#top">Syntonia</a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Основная навигация">
+        <a href="#about">О проекте</a>
+        <a href="#formats">Понять себя</a>
+        <a href="#formats">Пространство практики</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="btn btn--outline btn--small" href="#request">Личная встреча</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Открыть меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="about">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__media" aria-hidden="true">
+        <img src="./assets/hero.jpg" alt="" class="hero__img">
+        <div class="hero__overlay"></div>
+      </div>
+
+      <div class="container hero__content">
+        <p class="eyebrow">Пространство практики</p>
+        <h1 class="hero__title">Форматы<br>работы</h1>
+        <p class="hero__subtitle">Форматы различаются по глубине запроса,<br>длительности и степени сопровождения.</p>
+
+        <div class="hero__avatar">
+          <img src="./assets/avatar.jpg" alt="Ведущий практики Syntonia" width="160" height="160">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FORMATS + SIDEBAR ============ -->
+    <section class="formats" id="formats">
+      <div class="container">
+
+        <div class="formats__labels" aria-hidden="true">
+          <span>Первый шаг</span>
+          <span>Глубокое сопровождение</span>
+        </div>
+
+        <div class="formats__layout">
+
+          <!-- Левая колонка: список форматов -->
+          <div class="formats__list" role="list">
+
+            <article class="format-card" role="listitem" data-format="entry" tabindex="0">
+              <span class="format-card__num">01</span>
+              <div class="format-card__body">
+                <h3 class="format-card__title">Точка входа</h3>
+                <p class="format-card__desc">Короткая встреча для прояснения запроса и&nbsp;понимания направления.</p>
+                <p class="format-card__meta"><span class="duration">30 минут</span><span class="price">$40</span></p>
+              </div>
+            </article>
+
+            <article class="format-card" role="listitem" data-format="master" tabindex="0">
+              <span class="format-card__num">02</span>
+              <div class="format-card__body">
+                <h3 class="format-card__title">Индивидуальная мастер-сессия</h3>
+                <p class="format-card__desc">Глубокая индивидуальная работа с&nbsp;одним запросом или конкретной темой.</p>
+                <p class="format-card__meta"><span class="duration">2 часа</span><span class="price">$200</span></p>
+              </div>
+            </article>
+
+            <article class="format-card" role="listitem" data-format="p3" tabindex="0">
+              <span class="format-card__num">03</span>
+              <div class="format-card__body">
+                <h3 class="format-card__title">Программа — 3 встречи</h3>
+                <p class="format-card__desc">Последовательная работа с&nbsp;запросом в&nbsp;трёх индивидуальных встречах.</p>
+                <p class="format-card__meta"><span class="duration">3 × 2 часа</span><span class="price">$570</span></p>
+              </div>
+            </article>
+
+            <article class="format-card" role="listitem" data-format="p5" tabindex="0">
+              <span class="format-card__num">04</span>
+              <div class="format-card__body">
+                <h3 class="format-card__title">Программа — 5 встреч</h3>
+                <p class="format-card__desc">Более глубокий цикл для системной работы и&nbsp;интеграции изменений.</p>
+                <p class="format-card__meta"><span class="duration">5 × 2 часа</span><span class="price">$930</span></p>
+              </div>
+            </article>
+
+            <article class="format-card" role="listitem" data-format="support" tabindex="0">
+              <span class="format-card__num">05</span>
+              <div class="format-card__body">
+                <h3 class="format-card__title">Сопровождение</h3>
+                <p class="format-card__desc">Поддерживающая встреча для продолжения процесса и&nbsp;текущих изменений.</p>
+                <p class="format-card__meta"><span class="duration">60 минут</span><span class="price">$100</span></p>
+              </div>
+            </article>
+
+            <!-- CTA-блок под списком -->
+            <div class="formats__cta" id="formats-cta">
+              <h3>Не уверены, какой формат выбрать?</h3>
+              <p>Начните с Точки входа.</p>
+              <a class="btn btn--primary" href="#request" data-select-format="entry">Выбрать Точку входа</a>
+            </div>
+          </div>
+
+          <!-- Правая колонка (aside): выбранный формат + заявка -->
+          <aside class="sidebar" id="request">
+
+            <div class="sidebar__card">
+              <p class="sidebar__label">Выбранный формат</p>
+              <div class="sidebar__chosen" id="chosen-format">
+                <span class="sidebar__chosen-name" data-chosen-name>Точка входа</span>
+                <span class="sidebar__chosen-meta"><span data-chosen-duration>30 минут</span><span class="sidebar__price" data-chosen-price>$40</span></span>
+              </div>
+            </div>
+
+            <div class="sidebar__card sidebar__about" id="format-about">
+              <p class="sidebar__label">О формате</p>
+              <p class="sidebar__about-text" data-format-text>Точка входа — первая встреча, когда важно не начинать сразу с глубокой работы, а спокойно разобраться, что происходит сейчас и куда лучше двигаться дальше.</p>
+              <p class="sidebar__label sidebar__label--gap">На встрече:</p>
+              <ul class="sidebar__list" data-format-points>
+                <li>проясняем запрос и то, что сейчас действительно важно;</li>
+                <li>определяем основное направление работы;</li>
+                <li>смотрим, какой формат может подойти дальше.</li>
+              </ul>
+            </div>
+
+            <form class="sidebar__card request-form" id="request-form" novalidate>
+              <div class="field">
+                <label class="field__label" for="f-name">Имя</label>
+                <input class="field__input" id="f-name" name="name" type="text" placeholder="Как к вам обращаться" autocomplete="name" required>
+                <span class="field__error" data-error-for="f-name"></span>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="f-email">Email</label>
+                <input class="field__input" id="f-email" name="email" type="email" placeholder="ваш@email.com" autocomplete="email" required>
+                <span class="field__error" data-error-for="f-email"></span>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="f-phone">Телефон</label>
+                <input class="field__input" id="f-phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" inputmode="tel">
+                <span class="field__error" data-error-for="f-phone"></span>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="f-comment">Комментарий <span class="field__optional">(опционально)</span></label>
+                <textarea class="field__input field__input--area" id="f-comment" name="comment" rows="3" placeholder="Что важно знать заранее, ваш запрос или вопросы..."></textarea>
+              </div>
+
+              <input type="hidden" name="format" id="f-format" value="entry">
+
+              <button class="btn btn--primary btn--block" type="submit">Отправить заявку</button>
+              <p class="request-form__note">Нажимая «Отправить заявку», вы соглашаетесь с&nbsp;условиями обработки данных.</p>
+              <p class="request-form__success" id="form-success" hidden>Спасибо! Заявка сохранена — мы свяжемся с вами по указанным контактам.</p>
+            </form>
+
+            <div class="sidebar__card sidebar__legal">
+              <p class="sidebar__label">Правовая информация</p>
+              <p>Материалы и сессии носят консультативный характер и не являются медицинской услугой.</p>
+              <nav class="sidebar__legal-links" aria-label="Правовые документы">
+                <a href="#">Публичная оферта</a>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Согласие на обработку персональных данных</a>
+              </nav>
+            </div>
+
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+
+        <div class="site-footer__brand">
+          <a class="logo logo--light" href="#top">Syntonia</a>
+          <p class="site-footer__tagline">Состояние, из которого строится жизнь</p>
+        </div>
+
+        <nav class="site-footer__col" aria-label="Навигация по сайту">
+          <p class="site-footer__heading">Навигация</p>
+          <a href="#about">О проекте</a>
+          <a href="#formats">Практики</a>
+          <a href="#formats">Форматы работы</a>
+          <a href="#">Отзывы</a>
+          <a href="#">Вопросы и ответы</a>
+        </nav>
+
+        <nav class="site-footer__col" aria-label="Контакты и соцсети">
+          <p class="site-footer__heading">Контакты</p>
+          <a href="#">Telegram</a>
+          <a href="#">Instagram</a>
+          <a href="#">YouTube</a>
+          <a href="mailto:hello@syntonia.com">hello@syntonia.com</a>
+        </nav>
+
+      </div>
+
+      <div class="site-footer__bottom">
+        <span>© Syntonia, 2026</span>
+        <div class="site-footer__legal">
+          <a href="#">Публичная оферта</a>
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Согласие на обработку персональных данных</a>
+          <button class="site-footer__cookie" type="button" id="cookie-link">Cookie settings</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie-баннер -->
+  <div class="cookie-banner" id="cookie-banner" hidden>
+    <p>Мы используем cookie для корректной работы сайта.</p>
+    <div class="cookie-banner__actions">
+      <button class="btn btn--primary btn--small" type="button" id="cookie-accept">Принять</button>
+      <button class="btn btn--ghost btn--small" type="button" id="cookie-decline">Отклонить</button>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
