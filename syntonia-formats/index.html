@@ -1,244 +1,382 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Форматы работы Syntonia: точка входа, индивидуальные сессии, программы и сопровождение.">
-  <title>Syntonia — Форматы работы</title>
+  <title>Syntonia — Состояние, из которого строится жизнь</title>
+  <meta name="description" content="Syntonia — глубинный метод работы с человеком. Когда меняется внутреннее основание, меняются выборы, отношения, энергия и жизнь.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Golos+Text:wght@400;500&family=Great+Vibes&family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,400;1,7..72,300&family=Lora:ital@1&family=Marck+Script&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="data/formats.js" defer></script>
+  <script src="data/voices.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
-<body>
+<body class="page page--home">
 
-  <!-- ============ HEADER ============ -->
-  <header class="site-header" id="top">
-    <div class="container site-header__inner">
-      <a class="logo" href="#top">Syntonia</a>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
 
-      <nav class="main-nav" id="main-nav" aria-label="Основная навигация">
-        <a href="#about">О проекте</a>
-        <a href="#formats">Понять себя</a>
-        <a href="#formats">Пространство практики</a>
+  <!-- Header: Figma «header / theme=dark, shape=floating» (167:641) -->
+  <header class="site-header site-header--dark site-header--floating" data-header>
+    <div class="site-header__inner">
+
+      <nav class="site-header__nav main-nav" aria-label="Основная навигация">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--dropdown">
+            <button class="main-nav__link main-nav__toggle" type="button"
+                    aria-expanded="false" aria-controls="nav-about" data-dropdown-toggle>
+              О проекте
+              <img class="main-nav__chevron" src="assets/icons/icon-chevron.svg" alt="" width="14" height="14">
+            </button>
+            <ul class="main-nav__dropdown" id="nav-about" hidden>
+              <li><a class="main-nav__dropdown-link" href="method.html">Метод Syntonia</a></li>
+              <li><a class="main-nav__dropdown-link" href="masters.html">Мастера</a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item"><a class="main-nav__link" href="quiz.html">Понять себя</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="practice.html">Пространство практики</a></li>
+        </ul>
       </nav>
 
+      <a class="site-header__logo logo" href="index.html" aria-label="Syntonia — на главную">
+        <img class="logo__image" src="assets/icons/logo-gold.svg" alt="Syntonia — Evolution of Consciousness" width="168" height="60">
+      </a>
+
       <div class="site-header__actions">
-        <a class="btn btn--outline btn--small" href="#request">Личная встреча</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Открыть меню">
-          <span></span><span></span><span></span>
+        <a class="btn btn--primary btn--textured btn--caps" href="booking.html">
+          Личная встреча
+          <img class="btn__icon" src="assets/icons/icon-arrow.svg" alt="" width="14" height="14">
+        </a>
+        <a class="icon-btn" href="#" aria-label="Личный кабинет (скоро)">
+          <img class="icon-btn__image" src="assets/icons/icon-profile.svg" alt="" width="45" height="45">
+        </a>
+        <button class="burger" type="button" aria-label="Открыть меню"
+                aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
         </button>
       </div>
     </div>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <ul class="mobile-menu__list">
+        <li><a class="mobile-menu__link" href="method.html">Метод Syntonia</a></li>
+        <li><a class="mobile-menu__link" href="masters.html">Мастера</a></li>
+        <li><a class="mobile-menu__link" href="quiz.html">Понять себя</a></li>
+        <li><a class="mobile-menu__link" href="practice.html">Пространство практики</a></li>
+        <li><a class="mobile-menu__link" href="library.html">Библиотека</a></li>
+        <li><a class="mobile-menu__link mobile-menu__link--accent" href="booking.html">Личная встреча</a></li>
+      </ul>
+    </div>
   </header>
 
-  <main id="about">
+  <main id="main">
 
-    <!-- ============ HERO ============ -->
-    <section class="hero">
-      <div class="hero__media" aria-hidden="true">
-        <img src="./assets/hero.jpg" alt="" class="hero__img">
-        <div class="hero__overlay"></div>
+    <!-- Hero: Figma «hero» (79:105) -->
+    <section class="hero hero--home" aria-labelledby="hero-title">
+      <div class="hero__media">
+        <img class="hero__image" src="assets/img/hero-home.jpg"
+             alt="Пустой светлый зал из травертина, в который через узкий проём падает солнечный луч"
+             width="1280" height="720" fetchpriority="high">
+        <span class="hero__overlay" aria-hidden="true"></span>
       </div>
 
-      <div class="container hero__content">
-        <p class="eyebrow">Пространство практики</p>
-        <h1 class="hero__title">Форматы<br>работы</h1>
-        <p class="hero__subtitle">Форматы различаются по глубине запроса,<br>длительности и степени сопровождения.</p>
+      <div class="hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title" id="hero-title">Состояние, из которого строится жизнь</h1>
+          <p class="hero__lead">Когда меняется внутреннее основание, меняются выборы, отношения, энергия и&nbsp;жизнь.</p>
+          <a class="btn btn--primary" href="quiz.html">
+            Узнать свой код реальности
+            <img class="btn__icon" src="assets/icons/icon-arrow.svg" alt="" width="14" height="14">
+          </a>
+        </div>
 
-        <div class="hero__avatar">
-          <img src="./assets/avatar.jpg" alt="Ведущий практики Syntonia" width="160" height="160">
+        <button class="play-btn" type="button" aria-label="Смотреть видео о Syntonia" data-video-play>
+          <img class="play-btn__icon" src="assets/icons/icon-play.svg" alt="" width="47" height="47">
+        </button>
+      </div>
+    </section>
+
+
+    <!-- Banner: Figma «banner-founder» -->
+    <section class="banner" aria-label="Слова основателя">
+      <img class="banner__image" src="assets/img/banner-founder.jpg"
+           alt="Екатерина Лебедева сидит у тёплой глиняной стены в солнечный день" width="1280" height="720" loading="lazy">
+      <div class="banner__content">
+        <p class="banner__title">Перемены в&nbsp;жизни начинаются изнутри</p>
+        <p class="banner__signature">by Ekaterina Lebedeva</p>
+      </div>
+    </section>
+
+    <!-- Pain: Figma «pain» -->
+    <section class="pain" aria-labelledby="pain-title">
+      <img class="section-bg" src="assets/img/pain-bg.jpg" alt="" width="1672" height="941" loading="lazy">
+      <div class="pain__inner container">
+        <div class="pain__intro">
+          <h2 class="h2 pain__title" id="pain-title">Когда нужен не просто разговор, а&nbsp;реальные перемены в&nbsp;жизни</h2>
+          <p class="text-muted pain__text">Если в&nbsp;отношениях снова больно, в&nbsp;выборе нет опоры, внутри тяжело, а&nbsp;энергии всё меньше&nbsp;— причина внутри, и&nbsp;это можно изменить</p>
+          <div class="pain__action">
+            <span class="script pain__script" aria-hidden="true">Начни</span>
+            <a class="btn btn--dark btn--caps btn--tall" href="booking.html#entry">
+              <span class="visually-hidden">Начни</span> с точки входа
+              <span class="icon-arrow" aria-hidden="true"></span>
+            </a>
+          </div>
+        </div>
+        <ol class="pain-list">
+          <li class="pain-list__item"><span class="pain-list__num" aria-hidden="true">01</span><p class="pain-list__text">Если жизнь идёт, а&nbsp;всё будто стоит на&nbsp;месте</p></li>
+          <li class="pain-list__item"><span class="pain-list__num" aria-hidden="true">02</span><p class="pain-list__text">Если попыток было уже столько, а&nbsp;по-настоящему легче так и&nbsp;не&nbsp;стало</p></li>
+          <li class="pain-list__item"><span class="pain-list__num" aria-hidden="true">03</span><p class="pain-list__text">Если ты устаёшь носить в&nbsp;себе напряжение, тяжесть или скрытую боль</p></li>
+          <li class="pain-list__item"><span class="pain-list__num" aria-hidden="true">04</span><p class="pain-list__text">Если тебе нужна глубокая и&nbsp;точная внутренняя работа</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Method: Figma «method» -->
+    <section class="method" aria-labelledby="method-title">
+      <div class="method__inner container">
+        <p class="eyebrow">Метод Syntonia</p>
+        <p class="method__lead">Неблагоприятные линии жизни <br>мы&nbsp;часто называем судьбой.</p>
+        <p class="method__accent">Но существует выход из&nbsp;предначертанного.</p>
+        <div class="method__cta">
+          <h2 class="h2" id="method-title">Там, где начинается новый выбор</h2>
+          <a class="text-link" href="method.html">Как это работает <span class="icon-arrow" aria-hidden="true"></span></a>
         </div>
       </div>
     </section>
 
-    <!-- ============ FORMATS + SIDEBAR ============ -->
-    <section class="formats" id="formats">
-      <div class="container">
-
-        <div class="formats__labels" aria-hidden="true">
-          <span>Первый шаг</span>
-          <span>Глубокое сопровождение</span>
+    <!-- Quiz: Figma «quiz» -->
+    <section class="quiz-promo" aria-labelledby="quiz-title">
+      <img class="section-bg" src="assets/img/quiz-bg.jpg" alt="" width="1280" height="548" loading="lazy">
+      <div class="quiz-promo__inner container">
+        <h2 class="h2 quiz-promo__title" id="quiz-title">Диагностика состояния</h2>
+        <p class="quiz-promo__text"><span class="script quiz-promo__script">Тест</span> поможет увидеть, что сейчас управляет твоим состоянием и&nbsp;жизнью</p>
+        <div class="quiz-promo__action">
+          <a class="btn btn--primary btn--caps btn--bordered" href="quiz.html">Понять себя <span class="icon-arrow" aria-hidden="true"></span></a>
+          <span class="quiz-promo__note">Бесплатно · 2-3 минуты</span>
         </div>
+      </div>
+    </section>
 
-        <div class="formats__layout">
+    <!-- About founder: Figma «about-founder» -->
+    <section class="founder" aria-labelledby="founder-title">
+      <div class="container">
+        <div class="founder__card">
+          <img class="founder__photo" src="assets/img/founder-portrait.jpg"
+               alt="Екатерина Лебедева в бежевом платье сидит в светлом кресле" width="1752" height="1762" loading="lazy">
+          <div class="founder__body">
+            <h2 class="h2" id="founder-title">Екатерина Лебедева</h2>
+            <p class="founder__role">Психолог · основатель Syntonia · глубже слов</p>
+            <blockquote class="founder__quote"><p>«Я&nbsp;не&nbsp;работаю вокруг проблемы. Я&nbsp;веду к её&nbsp;источнику».</p></blockquote>
+            <a class="text-link text-link--l" href="masters.html">Познакомиться ближе <span class="icon-arrow" aria-hidden="true"></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- Левая колонка: список форматов -->
-          <div class="formats__list" role="list">
+    <!-- Process: Figma «process» -->
+    <section class="process" aria-labelledby="process-title">
+      <div class="container">
+        <h2 class="h2 section-title" id="process-title">Как проходит работа?</h2>
+        <ol class="process__list">
+          <li class="process-step">
+            <div class="process-step__body">
+              <h3 class="h3">Сначала становится ясно, что с&nbsp;тобой происходит на&nbsp;самом деле</h3>
+              <p class="process-step__text">Не&nbsp;нужно подбирать слова. Открывается, из&nbsp;какого состояния ты&nbsp;живёшь и&nbsp;почему жизнь снова складывается именно так.</p>
+            </div>
+            <img class="process-step__image" src="assets/img/process-1.jpg" alt="Акварель: две женщины сидят друг напротив друга, между ними тёплый свет" width="1915" height="821" loading="lazy">
+          </li>
+          <li class="process-step process-step--reverse">
+            <div class="process-step__body">
+              <h3 class="h3">Затем мы идём в&nbsp;глубину причины</h3>
+              <p class="process-step__text">Вместе находим, где берут начало чувства, реакции и&nbsp;выборы, которые сегодня управляют твоей жизнью.</p>
+            </div>
+            <img class="process-step__image" src="assets/img/process-2.jpg" alt="Акварель: две женщины идут рядом по золотой траве" width="1914" height="822" loading="lazy">
+          </li>
+          <li class="process-step">
+            <div class="process-step__body">
+              <h3 class="h3">И&nbsp;программа отпускает</h3>
+              <p class="process-step__text">Это не&nbsp;облегчение на&nbsp;время, а&nbsp;выход. Старое растворяется, в&nbsp;сердце просыпается тепло. И&nbsp;дальше ты&nbsp;идёшь со&nbsp;своим светом, легко и&nbsp;свободно.</p>
+            </div>
+            <img class="process-step__image" src="assets/img/process-3.jpg" alt="Акварель: женщина легко идёт навстречу свету, положив руку на сердце" width="1909" height="824" loading="lazy">
+          </li>
+        </ol>
+      </div>
+    </section>
 
-            <article class="format-card" role="listitem" data-format="entry" tabindex="0">
-              <span class="format-card__num">01</span>
-              <div class="format-card__body">
-                <h3 class="format-card__title">Точка входа</h3>
-                <p class="format-card__desc">Короткая встреча для прояснения запроса и&nbsp;понимания направления.</p>
-                <p class="format-card__meta"><span class="duration">30 минут</span><span class="price">$40</span></p>
-              </div>
-            </article>
-
-            <article class="format-card" role="listitem" data-format="master" tabindex="0">
-              <span class="format-card__num">02</span>
-              <div class="format-card__body">
-                <h3 class="format-card__title">Индивидуальная мастер-сессия</h3>
-                <p class="format-card__desc">Глубокая индивидуальная работа с&nbsp;одним запросом или конкретной темой.</p>
-                <p class="format-card__meta"><span class="duration">2 часа</span><span class="price">$200</span></p>
-              </div>
-            </article>
-
-            <article class="format-card" role="listitem" data-format="p3" tabindex="0">
-              <span class="format-card__num">03</span>
-              <div class="format-card__body">
-                <h3 class="format-card__title">Программа — 3 встречи</h3>
-                <p class="format-card__desc">Последовательная работа с&nbsp;запросом в&nbsp;трёх индивидуальных встречах.</p>
-                <p class="format-card__meta"><span class="duration">3 × 2 часа</span><span class="price">$570</span></p>
-              </div>
-            </article>
-
-            <article class="format-card" role="listitem" data-format="p5" tabindex="0">
-              <span class="format-card__num">04</span>
-              <div class="format-card__body">
-                <h3 class="format-card__title">Программа — 5 встреч</h3>
-                <p class="format-card__desc">Более глубокий цикл для системной работы и&nbsp;интеграции изменений.</p>
-                <p class="format-card__meta"><span class="duration">5 × 2 часа</span><span class="price">$930</span></p>
-              </div>
-            </article>
-
-            <article class="format-card" role="listitem" data-format="support" tabindex="0">
-              <span class="format-card__num">05</span>
-              <div class="format-card__body">
-                <h3 class="format-card__title">Сопровождение</h3>
-                <p class="format-card__desc">Поддерживающая встреча для продолжения процесса и&nbsp;текущих изменений.</p>
-                <p class="format-card__meta"><span class="duration">60 минут</span><span class="price">$100</span></p>
-              </div>
-            </article>
-
-            <!-- CTA-блок под списком -->
-            <div class="formats__cta" id="formats-cta">
-              <h3>Не уверены, какой формат выбрать?</h3>
-              <p>Начните с Точки входа.</p>
-              <a class="btn btn--primary" href="#request" data-select-format="entry">Выбрать Точку входа</a>
+    <!-- Entry: Figma «entry» -->
+    <section class="entry" id="entry" aria-labelledby="entry-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="h2" id="entry-title">С чего начать</h2>
+          <p class="section-head__sub">Бережно и&nbsp;точно. Ясность в&nbsp;том, что с&nbsp;тобой происходит.</p>
+        </header>
+        <div class="entry__grid">
+          <div class="entry__body">
+            <h3 class="h-card">Точка входа</h3>
+            <p class="entry__text">Первая встреча. Ты&nbsp;увидишь, из&nbsp;какого состояния сейчас строится твоя жизнь, и&nbsp;почувствуешь, как звучит эта работа, прежде чем идти дальше.</p>
+            <p class="entry__meta">Онлайн · 30&nbsp;минут</p>
+            <div class="btn-row">
+              <a class="btn btn--textured btn--primary" href="booking.html#entry">Начать с&nbsp;точки входа <span class="icon-arrow" aria-hidden="true"></span></a>
+              <a class="btn btn--outline" href="#formats">Форматы работы</a>
             </div>
           </div>
+          <figure class="entry__media">
+            <img class="entry__image" src="assets/img/entry-online.jpg" alt="Женщина в наушнике смотрит онлайн-сессию с Екатериной на ноутбуке" width="1280" height="960" loading="lazy">
+            <figcaption class="script entry__caption">Рядом, <br>даже на&nbsp;расстоянии</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-          <!-- Правая колонка (aside): выбранный формат + заявка -->
-          <aside class="sidebar" id="request">
+    <!-- Formats: Figma «formats» (+ состояния 719:301…524). Данные: data/formats.js -->
+    <section class="formats" id="formats" aria-labelledby="formats-title">
+      <img class="section-bg" src="assets/img/formats-bg.jpg" alt="" width="1448" height="1086" loading="lazy">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="h2" id="formats-title">Форматы работы</h2>
+          <p class="section-head__sub">Форматы различаются по&nbsp;глубине запроса, длительности и&nbsp;степени сопровождения.</p>
+        </header>
+        <div class="formats__panel" data-formats>
+          <div class="formats__stage">
+            <div class="formats__slides" data-formats-slides></div>
+            <button class="slider-arrow slider-arrow--prev formats__arrow formats__arrow--prev" type="button" aria-label="Предыдущий формат" data-formats-prev></button>
+            <button class="slider-arrow slider-arrow--next formats__arrow formats__arrow--next" type="button" aria-label="Следующий формат" data-formats-next></button>
+            <p class="formats__counter" aria-live="polite" data-formats-counter>1/5</p>
+          </div>
+          <div class="formats__tabs" role="tablist" aria-label="Форматы работы" data-formats-tabs></div>
+          <noscript><p class="formats__noscript">Подробнее о&nbsp;форматах — на&nbsp;<a href="booking.html">странице записи</a>.</p></noscript>
+        </div>
+        <p class="formats__footnote">Переход к&nbsp;записи ни&nbsp;к&nbsp;чему не&nbsp;обязывает: сначала ты&nbsp;можешь задать вопросы, оплата идёт последним шагом.</p>
+      </div>
+    </section>
 
-            <div class="sidebar__card">
-              <p class="sidebar__label">Выбранный формат</p>
-              <div class="sidebar__chosen" id="chosen-format">
-                <span class="sidebar__chosen-name" data-chosen-name>Точка входа</span>
-                <span class="sidebar__chosen-meta"><span data-chosen-duration>30 минут</span><span class="sidebar__price" data-chosen-price>$40</span></span>
-              </div>
-            </div>
+    <!-- Voices: Figma «voices». Данные: data/voices.js -->
+    <section class="voices" id="voices" aria-labelledby="voices-title">
+      <img class="section-bg" src="assets/img/voices-bg.jpg" alt="" width="1672" height="941" loading="lazy">
+      <div class="container">
+        <header class="section-head section-head--left">
+          <h2 class="h2" id="voices-title">Голоса</h2>
+          <p class="section-head__sub">О&nbsp;том, как внутренняя работа начинает менять состояние и&nbsp;саму жизнь</p>
+        </header>
+      </div>
+      <div class="voices__viewport" data-voices>
+        <ul class="voices__track" data-voices-track aria-live="polite"></ul>
+      </div>
+      <div class="container voices__controls">
+        <div class="leaf-dots" data-voices-dots aria-label="Выбор отзыва"></div>
+        <div class="slider-arrows">
+          <button class="slider-arrow slider-arrow--prev" type="button" aria-label="Предыдущий отзыв" data-voices-prev></button>
+          <button class="slider-arrow slider-arrow--next" type="button" aria-label="Следующий отзыв" data-voices-next></button>
+        </div>
+      </div>
+    </section>
 
-            <div class="sidebar__card sidebar__about" id="format-about">
-              <p class="sidebar__label">О формате</p>
-              <p class="sidebar__about-text" data-format-text>Точка входа — первая встреча, когда важно не начинать сразу с глубокой работы, а спокойно разобраться, что происходит сейчас и куда лучше двигаться дальше.</p>
-              <p class="sidebar__label sidebar__label--gap">На встрече:</p>
-              <ul class="sidebar__list" data-format-points>
-                <li>проясняем запрос и то, что сейчас действительно важно;</li>
-                <li>определяем основное направление работы;</li>
-                <li>смотрим, какой формат может подойти дальше.</li>
-              </ul>
-            </div>
+    <!-- Library: Figma «library» -->
+    <section class="library-promo" aria-labelledby="library-title">
+      <img class="library-promo__image" src="assets/img/library-books.jpg" alt="Книга «Коды построения реальности» и выпуски журнала Syntonia.Life в нише с аркой" width="1672" height="941" loading="lazy">
+      <div class="library-promo__body">
+        <p class="eyebrow">Библиотека</p>
+        <p class="library-promo__kicker">Книга · журналы</p>
+        <h2 class="h2" id="library-title">Где для внутреннего находятся слова</h2>
+        <p class="library-promo__text">Книга и&nbsp;выпуски журнала Syntonia собраны в&nbsp;одном пространстве&nbsp;— чтобы читать медленно, возвращаться по&nbsp;состоянию и&nbsp;находить слова для того, что происходит внутри.</p>
+        <a class="text-link text-link--plain" href="library.html">Открыть библиотеку <span class="icon-arrow" aria-hidden="true"></span></a>
+      </div>
+    </section>
 
-            <form class="sidebar__card request-form" id="request-form" novalidate>
-              <div class="field">
-                <label class="field__label" for="f-name">Имя</label>
-                <input class="field__input" id="f-name" name="name" type="text" placeholder="Как к вам обращаться" autocomplete="name" required>
-                <span class="field__error" data-error-for="f-name"></span>
-              </div>
+    <!-- Air photo: Figma «air-photo» -->
+    <div class="air-photo">
+      <img class="air-photo__image" src="assets/img/air-founder.jpg" alt="Екатерина Лебедева улыбается у тёплой стены под оливковыми ветвями" width="1280" height="397" loading="lazy">
+    </div>
 
-              <div class="field">
-                <label class="field__label" for="f-email">Email</label>
-                <input class="field__input" id="f-email" name="email" type="email" placeholder="ваш@email.com" autocomplete="email" required>
-                <span class="field__error" data-error-for="f-email"></span>
-              </div>
-
-              <div class="field">
-                <label class="field__label" for="f-phone">Телефон</label>
-                <input class="field__input" id="f-phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" inputmode="tel">
-                <span class="field__error" data-error-for="f-phone"></span>
-              </div>
-
-              <div class="field">
-                <label class="field__label" for="f-comment">Комментарий <span class="field__optional">(опционально)</span></label>
-                <textarea class="field__input field__input--area" id="f-comment" name="comment" rows="3" placeholder="Что важно знать заранее, ваш запрос или вопросы..."></textarea>
-              </div>
-
-              <input type="hidden" name="format" id="f-format" value="entry">
-
-              <button class="btn btn--primary btn--block" type="submit">Отправить заявку</button>
-              <p class="request-form__note">Нажимая «Отправить заявку», вы соглашаетесь с&nbsp;условиями обработки данных.</p>
-              <p class="request-form__success" id="form-success" hidden>Спасибо! Заявка сохранена — мы свяжемся с вами по указанным контактам.</p>
-            </form>
-
-            <div class="sidebar__card sidebar__legal">
-              <p class="sidebar__label">Правовая информация</p>
-              <p>Материалы и сессии носят консультативный характер и не являются медицинской услугой.</p>
-              <nav class="sidebar__legal-links" aria-label="Правовые документы">
-                <a href="#">Публичная оферта</a>
-                <a href="#">Политика конфиденциальности</a>
-                <a href="#">Согласие на обработку персональных данных</a>
-              </nav>
-            </div>
-
-          </aside>
+    <!-- FAQ: Figma «faq» (+ состояния) -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <img class="section-bg" src="assets/img/paper-bg.jpg" alt="" width="1672" height="941" loading="lazy">
+      <div class="faq__inner container">
+        <div class="faq__intro">
+          <h2 class="faq__title" id="faq-title">
+            <span class="faq__line">То, что</span>
+            <span class="faq__line">важно</span>
+            <span class="faq__line">ПОНЯТЬ</span>
+            <span class="faq__line faq__line--shift">перед</span>
+            <span class="faq__line faq__line--shift">началом</span>
+          </h2>
+          <p class="text-muted faq__text">О&nbsp;том, как внутренняя работа начинает менять состояние и&nbsp;саму жизнь</p>
+          <a class="btn btn--textured btn--primary" href="booking.html#question">Задать вопрос <span class="icon-arrow" aria-hidden="true"></span></a>
+        </div>
+        <div class="faq__list">
+          <details class="faq-item" name="faq" open>
+            <summary class="faq-item__question">Если я&nbsp;уже был в&nbsp;терапии, мне это подойдёт?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+            <p class="faq-item__answer">Да&nbsp;и&nbsp;поможет. Работа идёт глубже&nbsp;— с&nbsp;внутренним состоянием, подсознательными причинами и&nbsp;тем, что на&nbsp;тонком плане управляет жизнью.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary class="faq-item__question">Чем этот подход отличается от&nbsp;обычной психологии?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+            <p class="faq-item__answer" data-draft>Ответ ожидается от&nbsp;заказчика: в&nbsp;Figma раскрыт только первый вопрос.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary class="faq-item__question">Зачем мне это, если я&nbsp;уже многое о&nbsp;себе понял?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+            <p class="faq-item__answer" data-draft>Ответ ожидается от&nbsp;заказчика.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary class="faq-item__question">Чем Точка входа отличается от&nbsp;мастер-сессии?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+            <p class="faq-item__answer" data-draft>Точка входа&nbsp;— первая 30-минутная встреча, чтобы увидеть, что мешает, и&nbsp;почувствовать работу. Мастер-сессия&nbsp;— двухчасовая глубокая работа с&nbsp;причиной. (Черновик, нужен текст заказчика.)</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary class="faq-item__question">Сколько встреч обычно нужно?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+            <p class="faq-item__answer" data-draft>Ответ ожидается от&nbsp;заказчика.</p>
+          </details>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ============ FOOTER ============ -->
+  <!-- Footer: Figma «footer» (148:451) -->
   <footer class="site-footer">
-    <div class="container">
-      <div class="site-footer__grid">
-
+        <div class="site-footer__inner container">
+      <div class="site-footer__top">
         <div class="site-footer__brand">
-          <a class="logo logo--light" href="#top">Syntonia</a>
-          <p class="site-footer__tagline">Состояние, из которого строится жизнь</p>
+          <a class="logo" href="index.html" aria-label="Syntonia — на главную">
+            <img class="logo__image" src="assets/icons/logo-gold.svg" alt="Syntonia — Evolution of Consciousness" width="168" height="60" loading="lazy">
+          </a>
+          <p class="site-footer__tagline">Состояние, из&nbsp;которого строится жизнь</p>
         </div>
-
-        <nav class="site-footer__col" aria-label="Навигация по сайту">
-          <p class="site-footer__heading">Навигация</p>
-          <a href="#about">О проекте</a>
-          <a href="#formats">Практики</a>
-          <a href="#formats">Форматы работы</a>
-          <a href="#">Отзывы</a>
-          <a href="#">Вопросы и ответы</a>
+        <nav class="site-footer__col" aria-labelledby="footer-nav-title">
+          <p class="site-footer__heading" id="footer-nav-title">Навигация</p>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="method.html">О проекте</a></li>
+            <li><a class="site-footer__link" href="practice.html">Практики</a></li>
+            <li><a class="site-footer__link" href="library.html">Библиотека</a></li>
+            <li><a class="site-footer__link" href="booking.html">Форматы работы</a></li>
+            <li><a class="site-footer__link" href="index.html#voices">Отзывы</a></li>
+            <li><a class="site-footer__link" href="index.html#faq">Вопросы и ответы</a></li>
+          </ul>
         </nav>
-
-        <nav class="site-footer__col" aria-label="Контакты и соцсети">
-          <p class="site-footer__heading">Контакты</p>
-          <a href="#">Telegram</a>
-          <a href="#">Instagram</a>
-          <a href="#">YouTube</a>
-          <a href="mailto:hello@syntonia.com">hello@syntonia.com</a>
-        </nav>
-
+        <div class="site-footer__col">
+          <p class="site-footer__heading" id="footer-contacts-title">Контакты</p>
+          <ul class="site-footer__list" aria-labelledby="footer-contacts-title">
+            <li><a class="site-footer__link" href="#" rel="noopener">Telegram</a></li>
+            <li><a class="site-footer__link" href="#" rel="noopener">Instagram</a></li>
+            <li><a class="site-footer__link" href="#" rel="noopener">YouTube</a></li>
+            <li><a class="site-footer__link" href="mailto:hello@syntonia.com">hello@syntonia.com</a></li>
+          </ul>
+        </div>
       </div>
-
       <div class="site-footer__bottom">
-        <span>© Syntonia, 2026</span>
-        <div class="site-footer__legal">
-          <a href="#">Публичная оферта</a>
-          <a href="#">Политика конфиденциальности</a>
-          <a href="#">Согласие на обработку персональных данных</a>
-          <button class="site-footer__cookie" type="button" id="cookie-link">Cookie settings</button>
-        </div>
+        <p class="site-footer__copy">© Syntonia, 2026</p>
+        <ul class="site-footer__legal">
+          <li><a class="site-footer__link" href="offer.html">Публичная оферта</a></li>
+          <li><a class="site-footer__link" href="privacy.html">Политика конфиденциальности</a></li>
+          <li><a class="site-footer__link" href="consent.html">Согласие на обработку персональных данных</a></li>
+          <li><button class="site-footer__link site-footer__cookie" type="button" data-cookie-settings>Cookie settings</button></li>
+        </ul>
       </div>
     </div>
   </footer>
 
-  <!-- Cookie-баннер -->
-  <div class="cookie-banner" id="cookie-banner" hidden>
-    <p>Мы используем cookie для корректной работы сайта.</p>
-    <div class="cookie-banner__actions">
-      <button class="btn btn--primary btn--small" type="button" id="cookie-accept">Принять</button>
-      <button class="btn btn--ghost btn--small" type="button" id="cookie-decline">Отклонить</button>
-    </div>
-  </div>
-
-  <script src="./script.js"></script>
 </body>
 </html>

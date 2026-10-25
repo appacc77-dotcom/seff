@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Тест состояния — Syntonia</title>
+  <meta name="description" content="Короткий тест: что сейчас сильнее всего влияет на вашу жизнь. В конце — ваш код и практика в подарок.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Golos+Text:wght@400;500&family=Great+Vibes&family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,400;1,7..72,300&family=Lora:ital@1&family=Marck+Script&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="data/quiz.js" defer></script>
+  <script src="data/practices.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body class="page page--inner page--quiz">
+
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <!-- Header: Figma «header / theme=dark, shape=floating» (167:641) -->
+  <header class="site-header site-header--dark site-header--floating" data-header>
+    <div class="site-header__inner">
+
+      <nav class="site-header__nav main-nav" aria-label="Основная навигация">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--dropdown">
+            <button class="main-nav__link main-nav__toggle" type="button"
+                    aria-expanded="false" aria-controls="nav-about" data-dropdown-toggle>
+              О проекте
+              <img class="main-nav__chevron" src="assets/icons/icon-chevron.svg" alt="" width="14" height="14">
+            </button>
+            <ul class="main-nav__dropdown" id="nav-about" hidden>
+              <li><a class="main-nav__dropdown-link" href="method.html">Метод Syntonia</a></li>
+              <li><a class="main-nav__dropdown-link" href="masters.html">Мастера</a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item"><a class="main-nav__link" href="quiz.html" aria-current="page">Понять себя</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="practice.html">Пространство практики</a></li>
+        </ul>
+      </nav>
+
+      <a class="site-header__logo logo" href="index.html" aria-label="Syntonia — на главную">
+        <img class="logo__image" src="assets/icons/logo-gold.svg" alt="Syntonia — Evolution of Consciousness" width="168" height="60">
+      </a>
+
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--textured btn--caps" href="booking.html">
+          Личная встреча
+          <img class="btn__icon" src="assets/icons/icon-arrow.svg" alt="" width="14" height="14">
+        </a>
+        <a class="icon-btn" href="#" aria-label="Личный кабинет (скоро)">
+          <img class="icon-btn__image" src="assets/icons/icon-profile.svg" alt="" width="45" height="45">
+        </a>
+        <button class="burger" type="button" aria-label="Открыть меню"
+                aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <ul class="mobile-menu__list">
+        <li><a class="mobile-menu__link" href="method.html">Метод Syntonia</a></li>
+        <li><a class="mobile-menu__link" href="masters.html">Мастера</a></li>
+        <li><a class="mobile-menu__link" href="quiz.html" aria-current="page">Понять себя</a></li>
+        <li><a class="mobile-menu__link" href="practice.html">Пространство практики</a></li>
+        <li><a class="mobile-menu__link" href="library.html">Библиотека</a></li>
+        <li><a class="mobile-menu__link mobile-menu__link--accent" href="booking.html">Личная встреча</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <main id="main">
+<!-- Quiz: Figma «Quiz» (529:118, 625:1165; результаты 542:3150…; регистрация 555:556; спасибо 556:725).
+     Собрано по эскизам теста и результата из Figma. Данные: data/quiz.js, data/practices.js -->
+    <section class="quiz" aria-labelledby="page-title">
+      <img class="section-bg" src="assets/img/quiz-page-bg.jpg" alt="" width="1672" height="941">
+      <div class="quiz__inner container">
+        <div class="quiz__intro" data-quiz-intro>
+          <p class="eyebrow">Тест состояния</p>
+          <h1 class="quiz__title" id="page-title">Что сейчас сильнее всего влияет на&nbsp;вашу жизнь?</h1>
+          <p class="quiz__lead">Отвечайте так, как чувствуете именно сейчас. <br>Здесь нет правильных или неправильных ответов.</p>
+          <ul class="quiz__meta">
+            <li>≈ 3 минуты</li>
+            <li data-quiz-count>12 вопросов</li>
+            <li>В&nbsp;конце&nbsp;— ваш код и&nbsp;практика в&nbsp;подарок</li>
+          </ul>
+        </div>
+
+        <form class="quiz-card" data-quiz-form>
+          <div class="quiz-card__top">
+            <div class="quiz-card__progress">
+              <p class="quiz-card__step" data-quiz-step>Вопрос 1 из 12</p>
+              <div class="quiz-card__bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="8" data-quiz-bar><span class="quiz-card__bar-fill" data-quiz-fill></span></div>
+            </div>
+            <p class="quiz-card__percent" data-quiz-percent>8% пройдено</p>
+            <fieldset class="quiz-card__gender">
+              <legend class="quiz-card__gender-label">Образ результата</legend>
+              <label class="chip"><input type="radio" name="gender" value="f" checked> <span>Женский</span></label>
+              <label class="chip"><input type="radio" name="gender" value="m"> <span>Мужской</span></label>
+            </fieldset>
+          </div>
+          <fieldset class="quiz-card__question">
+            <legend class="quiz-card__text" data-quiz-question></legend>
+            <div class="quiz-card__options" data-quiz-options></div>
+          </fieldset>
+          <div class="quiz-card__nav">
+            <button class="quiz-card__back" type="button" data-quiz-back>← Назад</button>
+            <button class="btn btn--textured btn--primary" type="submit" data-quiz-next>Далее <span class="icon-arrow" aria-hidden="true"></span></button>
+          </div>
+        </form>
+
+        <div class="quiz-result" hidden data-quiz-result tabindex="-1">
+          <button class="quiz-result__back" type="button" data-quiz-restart>← Пройти заново</button>
+          <header class="quiz-result__head">
+            <p class="eyebrow">Ваш результат</p>
+            <h2 class="quiz-result__title" data-result-title></h2>
+            <p class="quiz-result__subtitle" data-result-subtitle></p>
+            <p class="quiz-result__lead" data-result-lead></p>
+          </header>
+          <div class="result-card">
+            <div class="result-card__body">
+              <p class="eyebrow eyebrow--s">О вашем состоянии</p>
+              <h3 class="result-card__title" data-result-state></h3>
+              <div class="result-card__text" data-result-meaning></div>
+              <div data-result-changes-wrap>
+                <p class="eyebrow eyebrow--s">Что меняется, когда вы работаете с этим состоянием</p>
+                <ul class="leaf-list" data-result-changes></ul>
+              </div>
+            </div>
+            <figure class="result-card__photo">
+              <img src="assets/img/quiz-result.jpg" alt="Женщина в льняной накидке смотрит на море на закате" width="900" height="1200" loading="lazy">
+              <figcaption class="result-card__quote" data-result-quote-wrap><span data-result-quote></span> <span class="result-card__author">— Екатерина Лебедева</span></figcaption>
+            </figure>
+          </div>
+          <div class="gift-card">
+            <div class="gift-card__info">
+              <button class="gift-card__play" type="button" aria-label="Прослушать фрагмент практики (аудио ещё не загружено)" data-audio-stub></button>
+              <div>
+                <p class="eyebrow eyebrow--s">Ваша практика в&nbsp;подарок</p>
+                <p class="gift-card__title" data-result-gift></p>
+                <p class="gift-card__meta" data-result-gift-meta></p>
+                <p class="gift-card__text" data-result-gift-text></p>
+              </div>
+            </div>
+            <form class="gift-form" novalidate data-gift-form>
+              <p class="gift-form__title">Получите практику бесплатно</p>
+              <p class="gift-form__text">Просто зарегистрируйтесь, чтобы начать прослушивание.</p>
+              <div class="gift-form__row">
+                <label class="visually-hidden" for="g-email">Ваш email</label>
+                <input class="form-field__input" id="g-email" type="email" name="email" placeholder="Ваш email" autocomplete="email" required>
+                <button class="btn btn--textured btn--primary" type="submit">Получить практику</button>
+              </div>
+              <label class="checkbox"><input type="checkbox" name="consent" required> <span>Я&nbsp;согласен(а) с&nbsp;<a href="privacy.html">политикой конфиденциальности</a></span></label>
+              <p class="gift-form__error" hidden data-gift-error>Укажите email и&nbsp;подтвердите согласие.</p>
+              <p class="gift-form__success" role="status" hidden data-gift-success>Спасибо! Практика отправлена на&nbsp;вашу почту.</p>
+            </form>
+          </div>
+          <div class="continue-row">
+            <a class="continue-card" href="practice.html#codes"><span class="continue-card__label">Продолжить путь</span> <span class="continue-card__title">Полная практика вашего кода</span> <span class="icon-arrow" aria-hidden="true"></span></a>
+            <a class="continue-card" href="practice.html#packages"><span class="continue-card__label">Все 7 практик</span> <span class="continue-card__title">Коды построения реальности</span> <span class="icon-arrow" aria-hidden="true"></span></a>
+            <a class="continue-card" href="booking.html#entry"><span class="continue-card__label">Личная встреча</span> <span class="continue-card__title">Начать с&nbsp;Точки входа</span> <span class="icon-arrow" aria-hidden="true"></span></a>
+          </div>
+          <p class="quiz-result__end">Это только начало. <span class="quiz-result__end-sub">Внутри вас больше ресурса, чем кажется.</span></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: Figma «footer» (148:451) -->
+  <footer class="site-footer">
+        <div class="site-footer__inner container">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <a class="logo" href="index.html" aria-label="Syntonia — на главную">
+            <img class="logo__image" src="assets/icons/logo-gold.svg" alt="Syntonia — Evolution of Consciousness" width="168" height="60" loading="lazy">
+          </a>
+          <p class="site-footer__tagline">Состояние, из&nbsp;которого строится жизнь</p>
+        </div>
+        <nav class="site-footer__col" aria-labelledby="footer-nav-title">
+          <p class="site-footer__heading" id="footer-nav-title">Навигация</p>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="method.html">О проекте</a></li>
+            <li><a class="site-footer__link" href="practice.html">Практики</a></li>
+            <li><a class="site-footer__link" href="library.html">Библиотека</a></li>
+            <li><a class="site-footer__link" href="booking.html">Форматы работы</a></li>
+            <li><a class="site-footer__link" href="index.html#voices">Отзывы</a></li>
+            <li><a class="site-footer__link" href="index.html#faq">Вопросы и ответы</a></li>
+          </ul>
+        </nav>
+        <div class="site-footer__col">
+          <p class="site-footer__heading" id="footer-contacts-title">Контакты</p>
+          <ul class="site-footer__list" aria-labelledby="footer-contacts-title">
+            <li><a class="site-footer__link" href="#" rel="noopener">Telegram</a></li>
+            <li><a class="site-footer__link" href="#" rel="noopener">Instagram</a></li>
+            <li><a class="site-footer__link" href="#" rel="noopener">YouTube</a></li>
+            <li><a class="site-footer__link" href="mailto:hello@syntonia.com">hello@syntonia.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__copy">© Syntonia, 2026</p>
+        <ul class="site-footer__legal">
+          <li><a class="site-footer__link" href="offer.html">Публичная оферта</a></li>
+          <li><a class="site-footer__link" href="privacy.html">Политика конфиденциальности</a></li>
+          <li><a class="site-footer__link" href="consent.html">Согласие на обработку персональных данных</a></li>
+          <li><button class="site-footer__link site-footer__cookie" type="button" data-cookie-settings>Cookie settings</button></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>

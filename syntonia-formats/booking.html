@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Форматы работы и запись — Syntonia</title>
+  <meta name="description" content="Выберите формат работы и оставьте заявку на личную встречу.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Golos+Text:wght@400;500&family=Great+Vibes&family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,400;1,7..72,300&family=Lora:ital@1&family=Marck+Script&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="data/formats.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body class="page page--inner page--booking">
+
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <!-- Header: Figma «header / theme=dark, shape=floating» (167:641) -->
+  <header class="site-header site-header--dark site-header--floating" data-header>
+    <div class="site-header__inner">
+
+      <nav class="site-header__nav main-nav" aria-label="Основная навигация">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--dropdown">
+            <button class="main-nav__link main-nav__toggle" type="button"
+                    aria-expanded="false" aria-controls="nav-about" data-dropdown-toggle>
+              О проекте
+              <img class="main-nav__chevron" src="assets/icons/icon-chevron.svg" alt="" width="14" height="14">
+            </button>
+            <ul class="main-nav__dropdown" id="nav-about" hidden>
+              <li><a class="main-nav__dropdown-link" href="method.html">Метод Syntonia</a></li>
+              <li><a class="main-nav__dropdown-link" href="masters.html">Мастера</a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item"><a class="main-nav__link" href="quiz.html">Понять себя</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="practice.html">Пространство практики</a></li>
+        </ul>
+      </nav>
+
+      <a class="site-header__logo logo" href="index.html" aria-label="Syntonia — на главную">
+        <img class="logo__image" src="assets/icons/logo-gold.svg" alt="Syntonia — Evolution of Consciousness" width="168" height="60">
+      </a>
+
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--textured btn--caps" href="booking.html" aria-current="page">
+          Личная встреча
+          <img class="btn__icon" src="assets/icons/icon-arrow.svg" alt="" width="14" height="14">
+        </a>
+        <a class="icon-btn" href="#" aria-label="Личный кабинет (скоро)">
+          <img class="icon-btn__image" src="assets/icons/icon-profile.svg" alt="" width="45" height="45">
+        </a>
+        <button class="burger" type="button" aria-label="Открыть меню"
+                aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <ul class="mobile-menu__list">
+        <li><a class="mobile-menu__link" href="method.html">Метод Syntonia</a></li>
+        <li><a class="mobile-menu__link" href="masters.html">Мастера</a></li>
+        <li><a class="mobile-menu__link" href="quiz.html">Понять себя</a></li>
+        <li><a class="mobile-menu__link" href="practice.html">Пространство практики</a></li>
+        <li><a class="mobile-menu__link" href="library.html">Библиотека</a></li>
+        <li><a class="mobile-menu__link mobile-menu__link--accent" href="booking.html" aria-current="page">Личная встреча</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <main id="main">
+<!-- Booking: Figma «Booking» (383:286): booking-hero, booking-formats (+ состояния 808:415…833).
+     Собрано по эскизу страницы из Figma. Данные форматов: data/formats.js -->
+    <section class="page-hero page-hero--split" aria-labelledby="page-title">
+      <div class="page-hero__inner container">
+        <h1 class="page-hero__title page-hero__title--rule" id="page-title">Форматы работы</h1>
+        <p class="page-hero__lead">Форматы различаются по&nbsp;глубине запроса, длительности и&nbsp;степени сопровождения.</p>
+      </div>
+      <img class="page-hero__side-image page-hero__side-image--fade" src="assets/img/pain-bg.jpg" alt="Светлая каменная лестница под оливковыми ветвями" width="1672" height="941">
+    </section>
+
+    <section class="booking" aria-label="Выбор формата и заявка">
+      <div class="container">
+        <div class="booking__scale" aria-hidden="true">
+          <span>Первый шаг</span><span class="booking__scale-line"></span><span>Глубокое сопровождение</span>
+        </div>
+        <div class="booking__grid">
+          <div class="booking__formats">
+            <div class="booking-list" role="radiogroup" aria-label="Формат работы" data-booking-list></div>
+            <p class="booking__hint">Не&nbsp;уверены, какой формат выбрать? <br>Начните с&nbsp;Точки входа.</p>
+            <button class="text-link booking__hint-link" type="button" data-booking-pick="entry">Выбрать Точку входа <span class="icon-arrow" aria-hidden="true"></span></button>
+          </div>
+
+          <div class="booking-details" id="question">
+            <p class="booking-details__label">Выбранный формат</p>
+            <div class="booking-details__selected">
+              <p class="booking-details__title" data-booking-title>Точка входа · 30 мин · $50</p>
+              <a class="booking-details__change" href="#formats-list" data-booking-change>Изменить</a>
+            </div>
+            <p class="booking-details__label">О формате</p>
+            <p class="booking-details__about" data-booking-about></p>
+            <ul class="booking-details__points" data-booking-points></ul>
+
+            <form class="booking-form" novalidate data-booking-form>
+              <input type="hidden" name="format" value="entry" data-booking-input>
+              <div class="form-field">
+                <label class="form-field__label" for="f-name">Имя <span aria-hidden="true">*</span></label>
+                <input class="form-field__input" id="f-name" name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться" required>
+                <p class="form-field__error" id="f-name-error" hidden>Пожалуйста, укажите имя</p>
+              </div>
+              <div class="form-field">
+                <label class="form-field__label" for="f-email">Email <span aria-hidden="true">*</span></label>
+                <input class="form-field__input" id="f-email" name="email" type="email" autocomplete="email" placeholder="ваш@email.com" required>
+                <p class="form-field__error" id="f-email-error" hidden>Укажите корректный email</p>
+              </div>
+              <div class="form-field">
+                <label class="form-field__label" for="f-phone">Телефон <span aria-hidden="true">*</span></label>
+                <input class="form-field__input" id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
+                <p class="form-field__error" id="f-phone-error" hidden>Укажите телефон</p>
+              </div>
+              <div class="form-field">
+                <label class="form-field__label" for="f-comment">Комментарий <span class="form-field__optional">опционально</span></label>
+                <textarea class="form-field__input form-field__input--area" id="f-comment" name="comment" rows="3" placeholder="Что важно знать заранее, ваш запрос или вопросы…"></textarea>
+              </div>
+              <button class="btn btn--textured btn--primary btn--block" type="submit">Отправить заявку</button>
+              <p class="booking-form__note">Нажимая «Отправить заявку», вы&nbsp;соглашаетесь с&nbsp;условиями <a href="consent.html">обработки данных</a>.</p>
+              <p class="booking-form__success" role="status" hidden data-booking-success>Спасибо! Заявка принята. Мы&nbsp;свяжемся с&nbsp;вами, чтобы согласовать время встречи.</p>
+            </form>
+
+            <details class="legal-box">
+              <summary class="legal-box__summary">Правовая информация <span class="legal-box__plus" aria-hidden="true"></span></summary>
+              <div class="legal-box__body">
+                <p>Материалы и&nbsp;сессии носят образовательный и&nbsp;консультативный характер и&nbsp;не&nbsp;являются медицинской услугой.</p>
+                <p class="legal-box__links"><a href="offer.html">Публичная оферта</a> <a href="privacy.html">Политика конфиденциальности</a> <a href="consent.html">Согласие на&nbsp;обработку персональных данных</a></p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: Figma «footer» (148:451) -->
+  <footer class="site-footer">
+        <div class="site-footer__inner container">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <a class="logo" href="index.html" aria-label="Syntonia — на главную">
+            <img class="logo__image" src="assets/icons/logo-gold.svg" alt="Syntonia — Evolution of Consciousness" width="168" height="60" loading="lazy">
+          </a>
+          <p class="site-footer__tagline">Состояние, из&nbsp;которого строится жизнь</p>
+        </div>
+        <nav class="site-footer__col" aria-labelledby="footer-nav-title">
+          <p class="site-footer__heading" id="footer-nav-title">Навигация</p>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="method.html">О проекте</a></li>
+            <li><a class="site-footer__link" href="practice.html">Практики</a></li>
+            <li><a class="site-footer__link" href="library.html">Библиотека</a></li>
+            <li><a class="site-footer__link" href="booking.html">Форматы работы</a></li>
+            <li><a class="site-footer__link" href="index.html#voices">Отзывы</a></li>
+            <li><a class="site-footer__link" href="index.html#faq">Вопросы и ответы</a></li>
+          </ul>
+        </nav>
+        <div class="site-footer__col">
+          <p class="site-footer__heading" id="footer-contacts-title">Контакты</p>
+          <ul class="site-footer__list" aria-labelledby="footer-contacts-title">
+            <li><a class="site-footer__link" href="#" rel="noopener">Telegram</a></li>
+            <li><a class="site-footer__link" href="#" rel="noopener">Instagram</a></li>
+            <li><a class="site-footer__link" href="#" rel="noopener">YouTube</a></li>
+            <li><a class="site-footer__link" href="mailto:hello@syntonia.com">hello@syntonia.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__copy">© Syntonia, 2026</p>
+        <ul class="site-footer__legal">
+          <li><a class="site-footer__link" href="offer.html">Публичная оферта</a></li>
+          <li><a class="site-footer__link" href="privacy.html">Политика конфиденциальности</a></li>
+          <li><a class="site-footer__link" href="consent.html">Согласие на обработку персональных данных</a></li>
+          <li><button class="site-footer__link site-footer__cookie" type="button" data-cookie-settings>Cookie settings</button></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>

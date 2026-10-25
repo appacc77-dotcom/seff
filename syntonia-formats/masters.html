@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Мастера — Syntonia</title>
+  <meta name="description" content="Екатерина Лебедева, основатель Syntonia, и мастера пространства.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Golos+Text:wght@400;500&family=Great+Vibes&family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,400;1,7..72,300&family=Lora:ital@1&family=Marck+Script&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body class="page page--inner page--masters">
+
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <!-- Header: Figma «header / theme=dark, shape=floating» (167:641) -->
+  <header class="site-header site-header--dark site-header--floating" data-header>
+    <div class="site-header__inner">
+
+      <nav class="site-header__nav main-nav" aria-label="Основная навигация">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--dropdown">
+            <button class="main-nav__link main-nav__toggle" type="button"
+                    aria-expanded="false" aria-controls="nav-about" data-dropdown-toggle>
+              О проекте
+              <img class="main-nav__chevron" src="assets/icons/icon-chevron.svg" alt="" width="14" height="14">
+            </button>
+            <ul class="main-nav__dropdown" id="nav-about" hidden>
+              <li><a class="main-nav__dropdown-link" href="method.html">Метод Syntonia</a></li>
+              <li><a class="main-nav__dropdown-link" href="masters.html" aria-current="page">Мастера</a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item"><a class="main-nav__link" href="quiz.html">Понять себя</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="practice.html">Пространство практики</a></li>
+        </ul>
+      </nav>
+
+      <a class="site-header__logo logo" href="index.html" aria-label="Syntonia — на главную">
+        <img class="logo__image" src="assets/icons/logo-gold.svg" alt="Syntonia — Evolution of Consciousness" width="168" height="60">
+      </a>
+
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--textured btn--caps" href="booking.html">
+          Личная встреча
+          <img class="btn__icon" src="assets/icons/icon-arrow.svg" alt="" width="14" height="14">
+        </a>
+        <a class="icon-btn" href="#" aria-label="Личный кабинет (скоро)">
+          <img class="icon-btn__image" src="assets/icons/icon-profile.svg" alt="" width="45" height="45">
+        </a>
+        <button class="burger" type="button" aria-label="Открыть меню"
+                aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <ul class="mobile-menu__list">
+        <li><a class="mobile-menu__link" href="method.html">Метод Syntonia</a></li>
+        <li><a class="mobile-menu__link" href="masters.html" aria-current="page">Мастера</a></li>
+        <li><a class="mobile-menu__link" href="quiz.html">Понять себя</a></li>
+        <li><a class="mobile-menu__link" href="practice.html">Пространство практики</a></li>
+        <li><a class="mobile-menu__link" href="library.html">Библиотека</a></li>
+        <li><a class="mobile-menu__link mobile-menu__link--accent" href="booking.html">Личная встреча</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <main id="main">
+<!-- Masters: Figma «Masters» (217:237): founder-hero, masters-team, masters-more.
+     Собрано по эскизу страницы из Figma (растровый макет). -->
+    <section class="master-hero" aria-labelledby="page-title">
+      <div class="master-hero__media">
+        <img class="master-hero__image" src="assets/img/masters-founder.jpg" alt="Екатерина Лебедева сидит в каменной нише у арки с видом на горы" width="1448" height="1086">
+        <div class="master-hero__content">
+          <h1 class="master-hero__title" id="page-title">Екатерина Лебедева</h1>
+          <p class="master-hero__role">Психолог. Основатель Syntonia. Автор метода</p>
+          <p class="master-hero__quote">Я&nbsp;не&nbsp;работаю вокруг проблемы. <br>Я&nbsp;иду к&nbsp;её&nbsp;источнику.</p>
+          <div class="btn-row">
+            <button class="btn btn--ghost-light" type="button" data-audio-stub>Услышать голос <span class="wave-icon" aria-hidden="true"></span></button>
+            <a class="btn btn--sand" href="#founder-story">Познакомиться ближе</a>
+          </div>
+        </div>
+      </div>
+      <aside class="master-hero__side" aria-label="Разделы о мастере">
+        <img class="master-hero__stone" src="assets/img/masters-stone.jpg" alt="" width="476" height="752">
+        <ol class="master-topics" id="founder-story">
+          <li><details class="master-topic"><summary>Видеть глубже <span>01</span></summary><p data-draft>Текст раздела ожидается от&nbsp;заказчика.</p></details></li>
+          <li><details class="master-topic"><summary>Путь в&nbsp;профессию <span>02</span></summary><p data-draft>Текст раздела ожидается от&nbsp;заказчика.</p></details></li>
+          <li><details class="master-topic"><summary>Суть моего взгляда <span>03</span></summary><p data-draft>Текст раздела ожидается от&nbsp;заказчика.</p></details></li>
+          <li><details class="master-topic"><summary>Ясность рядом <span>04</span></summary><p data-draft>Текст раздела ожидается от&nbsp;заказчика.</p></details></li>
+          <li><details class="master-topic"><summary>Пространство Syntonia <span>05</span></summary><p data-draft>Текст раздела ожидается от&nbsp;заказчика.</p></details></li>
+        </ol>
+      </aside>
+    </section>
+
+    <section class="masters-team" aria-labelledby="team-title">
+      <div class="container">
+        <div class="masters-team__head">
+          <h2 class="masters-team__title" id="team-title">Один путь. <br>Много голосов.</h2>
+          <p class="masters-team__text">Syntonia&nbsp;— это пространство глубины и&nbsp;ясности. Здесь работают мастера, которым можно доверять. Каждый&nbsp;— со&nbsp;своей историей, опытом и&nbsp;способом быть рядом. Выбирайте того, с&nbsp;кем созвучно именно вам.</p>
+        </div>
+        <div class="ornament-line" aria-hidden="true"></div>
+        <div class="masters-more__bar">
+          <h2 class="eyebrow eyebrow--sand">Другие мастера Syntonia</h2>
+          <div class="slider-arrows">
+            <button class="slider-arrow slider-arrow--light slider-arrow--prev" type="button" aria-label="Предыдущий мастер" data-masters-prev></button>
+            <button class="slider-arrow slider-arrow--light slider-arrow--next" type="button" aria-label="Следующий мастер" data-masters-next></button>
+          </div>
+        </div>
+        <ul class="masters-track" data-masters-track>
+          <li class="master-card">
+            <img class="master-card__photo" src="assets/img/master-natalia.jpg" alt="Наталья Чеплыгина в бежевом жакете" width="1024" height="1280" loading="lazy">
+            <div class="master-card__body">
+              <h3 class="master-card__name">Наталья Чеплыгина</h3>
+              <p class="master-card__role">Мастер Syntonia</p>
+              <div class="ornament-line ornament-line--short" aria-hidden="true"></div>
+              <div class="btn-row">
+                <button class="btn btn--ghost-light" type="button" data-audio-stub>Услышать голос <span class="wave-icon" aria-hidden="true"></span></button>
+                <a class="btn btn--sand" href="booking.html">Познакомиться ближе</a>
+              </div>
+            </div>
+          </li>
+          <li class="master-card master-card--placeholder" data-draft>
+            <div class="master-card__body">
+              <h3 class="master-card__name">Новый мастер</h3>
+              <p class="master-card__role">Карточка ожидает данных: фото, имя, описание</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: Figma «footer» (148:451) -->
+  <footer class="site-footer">
+        <div class="site-footer__inner container">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <a class="logo" href="index.html" aria-label="Syntonia — на главную">
+            <img class="logo__image" src="assets/icons/logo-gold.svg" alt="Syntonia — Evolution of Consciousness" width="168" height="60" loading="lazy">
+          </a>
+          <p class="site-footer__tagline">Состояние, из&nbsp;которого строится жизнь</p>
+        </div>
+        <nav class="site-footer__col" aria-labelledby="footer-nav-title">
+          <p class="site-footer__heading" id="footer-nav-title">Навигация</p>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="method.html">О проекте</a></li>
+            <li><a class="site-footer__link" href="practice.html">Практики</a></li>
+            <li><a class="site-footer__link" href="library.html">Библиотека</a></li>
+            <li><a class="site-footer__link" href="booking.html">Форматы работы</a></li>
+            <li><a class="site-footer__link" href="index.html#voices">Отзывы</a></li>
+            <li><a class="site-footer__link" href="index.html#faq">Вопросы и ответы</a></li>
+          </ul>
+        </nav>
+        <div class="site-footer__col">
+          <p class="site-footer__heading" id="footer-contacts-title">Контакты</p>
+          <ul class="site-footer__list" aria-labelledby="footer-contacts-title">
+            <li><a class="site-footer__link" href="#" rel="noopener">Telegram</a></li>
+            <li><a class="site-footer__link" href="#" rel="noopener">Instagram</a></li>
+            <li><a class="site-footer__link" href="#" rel="noopener">YouTube</a></li>
+            <li><a class="site-footer__link" href="mailto:hello@syntonia.com">hello@syntonia.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__copy">© Syntonia, 2026</p>
+        <ul class="site-footer__legal">
+          <li><a class="site-footer__link" href="offer.html">Публичная оферта</a></li>
+          <li><a class="site-footer__link" href="privacy.html">Политика конфиденциальности</a></li>
+          <li><a class="site-footer__link" href="consent.html">Согласие на обработку персональных данных</a></li>
+          <li><button class="site-footer__link site-footer__cookie" type="button" data-cookie-settings>Cookie settings</button></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>

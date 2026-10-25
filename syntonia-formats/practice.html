@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Практики — Syntonia</title>
+  <meta name="description" content="Бесплатные и платные практики, коды состояний и пакеты практик Syntonia.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Golos+Text:wght@400;500&family=Great+Vibes&family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,400;1,7..72,300&family=Lora:ital@1&family=Marck+Script&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="data/practices.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body class="page page--inner page--practice">
+
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <!-- Header: Figma «header / theme=dark, shape=floating» (167:641) -->
+  <header class="site-header site-header--dark site-header--floating" data-header>
+    <div class="site-header__inner">
+
+      <nav class="site-header__nav main-nav" aria-label="Основная навигация">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--dropdown">
+            <button class="main-nav__link main-nav__toggle" type="button"
+                    aria-expanded="false" aria-controls="nav-about" data-dropdown-toggle>
+              О проекте
+              <img class="main-nav__chevron" src="assets/icons/icon-chevron.svg" alt="" width="14" height="14">
+            </button>
+            <ul class="main-nav__dropdown" id="nav-about" hidden>
+              <li><a class="main-nav__dropdown-link" href="method.html">Метод Syntonia</a></li>
+              <li><a class="main-nav__dropdown-link" href="masters.html">Мастера</a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item"><a class="main-nav__link" href="quiz.html">Понять себя</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="practice.html" aria-current="page">Пространство практики</a></li>
+        </ul>
+      </nav>
+
+      <a class="site-header__logo logo" href="index.html" aria-label="Syntonia — на главную">
+        <img class="logo__image" src="assets/icons/logo-gold.svg" alt="Syntonia — Evolution of Consciousness" width="168" height="60">
+      </a>
+
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--textured btn--caps" href="booking.html">
+          Личная встреча
+          <img class="btn__icon" src="assets/icons/icon-arrow.svg" alt="" width="14" height="14">
+        </a>
+        <a class="icon-btn" href="#" aria-label="Личный кабинет (скоро)">
+          <img class="icon-btn__image" src="assets/icons/icon-profile.svg" alt="" width="45" height="45">
+        </a>
+        <button class="burger" type="button" aria-label="Открыть меню"
+                aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <ul class="mobile-menu__list">
+        <li><a class="mobile-menu__link" href="method.html">Метод Syntonia</a></li>
+        <li><a class="mobile-menu__link" href="masters.html">Мастера</a></li>
+        <li><a class="mobile-menu__link" href="quiz.html">Понять себя</a></li>
+        <li><a class="mobile-menu__link" href="practice.html" aria-current="page">Пространство практики</a></li>
+        <li><a class="mobile-menu__link" href="library.html">Библиотека</a></li>
+        <li><a class="mobile-menu__link mobile-menu__link--accent" href="booking.html">Личная встреча</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <main id="main">
+<!-- Practice: Figma «Practice» (408:241): hero, practice-free, quiz, practice-pay, kody-practice-pay, practice-package, info-section.
+     Собрано по эскизу страницы из Figma. Данные карточек: data/practices.js -->
+    <section class="page-hero page-hero--split" aria-labelledby="page-title">
+      <div class="page-hero__inner container">
+        <h1 class="page-hero__title page-hero__title--rule" id="page-title">Практики</h1>
+        <p class="page-hero__lead">Здесь вы&nbsp;найдёте бесплатные практики для мягкого входа, более глубокие платные практики для самостоятельной работы, коды состояний и&nbsp;пакеты практик.</p>
+      </div>
+      <img class="page-hero__side-image" src="assets/img/practice-hero.jpg" alt="Керамическая ваза, чаша и раскрытая книга на деревянном столе в солнечном свете" width="1280" height="801">
+    </section>
+
+    <section class="practice-group" id="free" aria-labelledby="free-title">
+      <div class="container">
+        <header class="practice-group__head">
+          <h2 class="h3 practice-group__title" id="free-title">Практики для мягкого входа</h2>
+          <p class="practice-group__sub">Для бережной самостоятельной настройки состояния.</p>
+        </header>
+        <ul class="practice-grid practice-grid--free" data-practices="free"></ul>
+      </div>
+    </section>
+
+    <section class="quiz-banner" aria-labelledby="quiz-banner-title">
+      <div class="container">
+        <div class="quiz-banner__card">
+          <img class="section-bg" src="assets/img/format-support.jpg" alt="" width="1672" height="941" loading="lazy">
+          <div class="quiz-banner__body">
+            <h2 class="quiz-banner__title" id="quiz-banner-title">Пройдите короткий тест и&nbsp;получите практику для вас&nbsp;— в&nbsp;подарок</h2>
+            <p class="quiz-banner__text">Тест займёт всего 3&nbsp;минуты и&nbsp;поможет найти то, что нужно именно сейчас.</p>
+          </div>
+          <div class="quiz-banner__side">
+            <p class="quiz-banner__time">Это займёт <br>3 минуты</p>
+            <a class="btn btn--sand" href="quiz.html">Пройти тест <span class="icon-arrow" aria-hidden="true"></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="practice-group" id="paid" aria-labelledby="paid-title">
+      <div class="container">
+        <header class="practice-group__head">
+          <h2 class="h3 practice-group__title" id="paid-title">Практики для глубокой работы&nbsp;— платные</h2>
+          <p class="practice-group__sub">Для более глубокой самостоятельной работы с&nbsp;важными внутренними состояниями.</p>
+        </header>
+        <ul class="practice-grid practice-grid--paid" data-practices="paid"></ul>
+      </div>
+    </section>
+
+    <section class="practice-group" id="codes" aria-labelledby="codes-title">
+      <div class="container">
+        <header class="practice-group__head">
+          <h2 class="h3 practice-group__title" id="codes-title">Коды состояний <span class="practice-group__muted">— платные</span></h2>
+        </header>
+        <ul class="practice-grid practice-grid--codes" data-practices="codes"></ul>
+      </div>
+    </section>
+
+    <section class="practice-group" id="packages" aria-labelledby="packages-title">
+      <div class="container">
+        <header class="practice-group__head">
+          <h2 class="h3 practice-group__title" id="packages-title">Пакеты практик</h2>
+        </header>
+        <ul class="practice-grid practice-grid--packages" data-practices="packages"></ul>
+      </div>
+    </section>
+
+    <section class="info-band" aria-labelledby="info-title">
+      <div class="container info-band__inner">
+        <h2 class="h3" id="info-title">Как проходить практики</h2>
+        <p class="info-band__text">Найдите спокойное место, где вас никто не&nbsp;побеспокоит. Лучше всего слушать в&nbsp;наушниках. Вы&nbsp;можете остановиться в&nbsp;любой момент и&nbsp;вернуться позже. Платные практики и&nbsp;пакеты будут доступны в&nbsp;личном кабинете после оплаты.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: Figma «footer» (148:451) -->
+  <footer class="site-footer">
+        <div class="site-footer__inner container">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <a class="logo" href="index.html" aria-label="Syntonia — на главную">
+            <img class="logo__image" src="assets/icons/logo-gold.svg" alt="Syntonia — Evolution of Consciousness" width="168" height="60" loading="lazy">
+          </a>
+          <p class="site-footer__tagline">Состояние, из&nbsp;которого строится жизнь</p>
+        </div>
+        <nav class="site-footer__col" aria-labelledby="footer-nav-title">
+          <p class="site-footer__heading" id="footer-nav-title">Навигация</p>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="method.html">О проекте</a></li>
+            <li><a class="site-footer__link" href="practice.html">Практики</a></li>
+            <li><a class="site-footer__link" href="library.html">Библиотека</a></li>
+            <li><a class="site-footer__link" href="booking.html">Форматы работы</a></li>
+            <li><a class="site-footer__link" href="index.html#voices">Отзывы</a></li>
+            <li><a class="site-footer__link" href="index.html#faq">Вопросы и ответы</a></li>
+          </ul>
+        </nav>
+        <div class="site-footer__col">
+          <p class="site-footer__heading" id="footer-contacts-title">Контакты</p>
+          <ul class="site-footer__list" aria-labelledby="footer-contacts-title">
+            <li><a class="site-footer__link" href="#" rel="noopener">Telegram</a></li>
+            <li><a class="site-footer__link" href="#" rel="noopener">Instagram</a></li>
+            <li><a class="site-footer__link" href="#" rel="noopener">YouTube</a></li>
+            <li><a class="site-footer__link" href="mailto:hello@syntonia.com">hello@syntonia.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__copy">© Syntonia, 2026</p>
+        <ul class="site-footer__legal">
+          <li><a class="site-footer__link" href="offer.html">Публичная оферта</a></li>
+          <li><a class="site-footer__link" href="privacy.html">Политика конфиденциальности</a></li>
+          <li><a class="site-footer__link" href="consent.html">Согласие на обработку персональных данных</a></li>
+          <li><button class="site-footer__link site-footer__cookie" type="button" data-cookie-settings>Cookie settings</button></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>
